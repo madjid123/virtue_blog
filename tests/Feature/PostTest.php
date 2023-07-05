@@ -13,14 +13,14 @@ class PostTest extends TestCase
      * A basic feature test example.
      */
     protected $sample_post = [
-        "name="> "test blog",
+        "title"=> "test blog",
         "author" => "madjid",
         "content" => "this is a sample test."
     ];
     public function test_example(): void
     {
-        $response = $this->post('/api/posts/create',$this->sample_post);
+        $response = $this->post('/posts/create',$this->sample_post);
 
-        $response->assertStatus(200);
+        $response->assertStatus(302);
     }
 }
