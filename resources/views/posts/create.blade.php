@@ -10,13 +10,17 @@
 
 <body>
     <div>
-        <form action="" method="post">
+        <h2>Create post</h2>
+        <form action="/posts/create" method="POST">
+            @csrf
+            <!-- {{ csrf_field() }} -->
             <label>Title</label>
             <input placeholder="Enter the title of this blog post" name="title" />
             <label>Author</label>
-            <input placeholder="Enter author's name" name="author"/>
+            <input placeholder="Enter author's name" name="author" />
             <label>Content</label>
-            <textarea placeholder="Enter author's name" name="author"></textarea>
+            <textarea placeholder="Enter the content of this post" name="content"></textarea>
+            <input type="submit" />
         </form>
     </div>
 </body>
