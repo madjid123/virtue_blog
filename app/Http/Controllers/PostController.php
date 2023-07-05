@@ -9,8 +9,10 @@ use Illuminate\Support\Facades\Auth;
 class PostController extends Controller
 {
     
-    function show($post) {
-        return view("posts.post",$post);
+    function show() {
+        $posts = new Post();
+        $posts =$posts->all();
+        return view("posts.index",["posts" =>$posts]);
     }
     function create_form(){
         return view("/posts/create");
@@ -21,10 +23,9 @@ class PostController extends Controller
         $post->title =  $request->input("title");
         $post->user_id = $user;
         $post->content = $request->input("content");
-        Auth::check();
-        
+        $post->save();
         // Log::info($author);
-        return redirect("/");
+        return redirect("/posts");
 
     }
 }
