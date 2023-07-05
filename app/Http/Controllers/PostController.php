@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
+
 class PostController extends Controller
 {
     
@@ -14,7 +16,13 @@ class PostController extends Controller
         return view("/posts/create");
     }
     function create(Request $request){
-        $author= $request->input("author");
+        $user = $request->user()->id;
+        $post = new Post();
+        $post->title =  $request->input("title");
+        $post->user_id = $user;
+        $post->content = $request->input("content");
+        Auth::check();
+        
         // Log::info($author);
         return redirect("/");
 
