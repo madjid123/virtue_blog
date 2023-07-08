@@ -1,7 +1,7 @@
 {{-- @extends('layouts.navigation') --}}
 {{-- @section('content') --}}
+<h2> Blog Posts </h2>
 @forelse ($posts as $post)
-    <h2> Blog Posts </h2>
     <hr />
     <div class="blog-card">
         <h3>{{ $post->title }}</h3>
