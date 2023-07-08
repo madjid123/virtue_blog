@@ -11,7 +11,8 @@ class PostController extends Controller
     
     function show() {
         $posts = new Post();
-        $posts =$posts->all();
+        $posts =$posts::with("user:id,name")->get();
+        error_log($posts);
         return view("posts.index",["posts" =>$posts]);
     }
     function create_form(){
