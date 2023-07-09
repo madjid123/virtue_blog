@@ -4,7 +4,7 @@
 @forelse ($posts as $post)
     <hr />
     <div class="blog-card">
-        <h3>{{ $post->title }}</h3>
+        <h3> <a href="/posts/{{ $post->id }}/view">{{ $post->title }}</a></h3>
         <small> {{ $post->user->name }}</small>
         <small>{{ $post->created_at }}</small>
     </div>
