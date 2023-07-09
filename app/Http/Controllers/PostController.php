@@ -12,7 +12,6 @@ class PostController extends Controller
     function show() {
         $posts = new Post();
         $posts =$posts::with("user:id,name")->get();
-        error_log($posts);
         return view("posts.index",["posts" =>$posts]);
     }
     function create_form(){
@@ -28,5 +27,38 @@ class PostController extends Controller
         // Log::info($author);
         return redirect("/posts");
 
+    }
+    function edit(Request $request){
+        $id = $request->route()->parameter("id");
+        if ($id == null){
+        return response("Invalid id",505);
+        }
+        $post = Post::where("id",$id)->first();
+        if($request->user()->id != $post->user_id){
+            return response("You must be the author ",501);
+        }
+        return view('posts.edit',["post"=>$post]);
+    }
+    function edit_form(Request $request){
+        $id = $request->route()->parameter("id");
+        if ($id == null){
+            return response("Invalid id",505);
+        }
+        $post = Post::where("id",$id)->first();
+        $x = $request->user()->id == $post->user_id;
+        error_log($x);
+        echo "ldsjflkj";
+            
+        
+        if($request->user()->id != $post->user_id){
+            return response("You must be the author ",501);
+        }
+        $title= $request->input("title");
+        $content= $request->input("content");
+        $post->title = $title;
+        $post->content = $content;
+        $post->save();
+        return redirect("/posts");
+        
     }
 }
