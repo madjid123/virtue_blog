@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @if ($post)
-        <title>{{ $post->title }} </title>
-    @endif
-</head>
-
-<body>
+@extends('layouts.base')
+@section('content')
     <div>
         @if ($post)
             <h1>{{ $post->title }}</h1>
@@ -25,6 +14,4 @@
     <h2> Nothing to display</h2>
     @endif
     </div>
-</body>
-
-</html>
+@endsection
