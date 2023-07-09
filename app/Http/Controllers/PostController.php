@@ -14,6 +14,14 @@ class PostController extends Controller
         $posts =$posts::with("user:id,name")->get();
         return view("posts.index",["posts" =>$posts]);
     }
+    function view_post(Request $request){
+        $id = $request->route()->parameter("id");
+        if ($id == null){
+            return response("Invalid id",505);
+        }
+        $post = Post::where("id",$id)->first();
+        return view("posts.view",["post"=>$post]);
+    }
     function create_form(){
         return view("/posts/create");
     }
