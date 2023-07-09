@@ -10,4 +10,5 @@ Route::post("/posts/{id}/edit",PostController::class . "@edit_form");
 });
 Route::post("/posts/create",PostController::class . "@create");
 
+Route::get("posts/{id}/view",PostController::class . "@view_post");
 Route::get("posts",PostController::class . "@show");
