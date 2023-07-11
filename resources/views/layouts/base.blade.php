@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     @if ($post)
         <title>{{ $post->title }} </title>
@@ -23,11 +22,12 @@
             <a href="/login" class="hover:text-blue-400">Login</a>
             <a href="/register" class="hover:text-blue-400">Register</a>
         @endauth
-        {{-- <a href="/toggle-dark-mode">Toggle Dark Mode</a> --}}
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </nav>
     <div>
         @yield('content')
     </div>
 </body>
+@vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
 
 </html>
