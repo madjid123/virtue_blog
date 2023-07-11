@@ -10,6 +10,8 @@
     @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
     @if ($post)
         <title>{{ $post->title }} </title>
+    @else
+        <title>Virtue Blog </title>
     @endif
 </head>
 
