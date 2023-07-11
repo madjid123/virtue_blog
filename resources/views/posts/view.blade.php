@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-    <div class="post">
+    <div class="post flex flex-col ">
         @if ($post)
             <h1 class="text-4xl font-bold">{{ $post->title }}</h1>
             <hr class="h-0.5 w-full my-4 bg-gray-100 color-black" />
