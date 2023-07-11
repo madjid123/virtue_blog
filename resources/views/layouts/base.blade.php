@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
     @if ($post)
         <title>{{ $post->title }} </title>
     @endif
@@ -28,6 +29,6 @@
         @yield('content')
     </div>
 </body>
-@vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
+@vite(['resources/js/toggleDarkMode.js'])
 
 </html>
