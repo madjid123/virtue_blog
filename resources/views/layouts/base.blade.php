@@ -13,15 +13,15 @@
     @endif
 </head>
 
-<body class="bg-gray-100">
-    <nav class="navbar">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
+<body class="bg-gray-200 dark:bg-zinc-800">
+    <nav class="bg-white dark:bg-zinc-900 flex justify-around dark:text-white  shadow py-4">
+        <a href="/" class="hover:text-blue-400">Home</a>
+        <a href="/about"class="hover:text-blue-400">About</a>
         @auth
-            <a href="/profile">Profile</a>
+            <a href="/profile" class="hover:text-blue-400">Profile</a>
         @else
-            <a href="/login">Login</a>
-            <a href="/register">Register</a>
+            <a href="/login" class="hover:text-blue-400">Login</a>
+            <a href="/register" class="hover:text-blue-400">Register</a>
         @endauth
         {{-- <a href="/toggle-dark-mode">Toggle Dark Mode</a> --}}
     </nav>
