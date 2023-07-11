@@ -1,17 +1,21 @@
 @extends('layouts.base')
 @section('content')
-    <div class="flex flex-column justify-center">
-        <h2 class="text-4xl font-bold"> Blog Posts </h2>
-        @forelse ($posts as $post)
-            <hr />
-            <div class="blog-card">
-                <h3> <a href="/posts/{{ $post->id }}/view">{{ $post->title }}</a></h3>
-                <small> <a href="/profile/{{ $post->user_id }}">{{ $post->user->name }}</a> - </small>
-                <small>{{ $post->created_at->format('j F, Y ') }}</small>
-            </div>
-            <hr />
-        @empty
-            <div> There is no posts right now</div>
-        @endforelse
+    <div class="flex flex-col justify-center items-center py-4">
+        <h2 class="text-4xl font-bold pb-4 dark:text-white"> Blog Posts </h2>
+        <div class="flex items-start flex-col w-4/5">
+            @forelse ($posts as $post)
+                <div class="blog-card p-4 bg-white dark:bg-zinc-900 dark:text-white sm:rounded-lg shadow w-full my-1">
+                    <h3 class="text-2xl font-bold"> <a href="/posts/{{ $post->id }}/view"
+                            class="hover:text-blue-400">{{ $post->title }}</a></h3>
+                    <small> <a href="/profile/{{ $post->user_id }}"
+                            class="hover:text-red-400 dark:text-gray-200 text-gray-700">{{ $post->user->name }}</a> -
+                    </small>
+                    <small>{{ $post->created_at->format('j F, Y ') }}</small>
+                </div>
+
+            @empty
+                <div> There is no posts right now</div>
+            @endforelse
+        </div>
     </div>
 @endsection
