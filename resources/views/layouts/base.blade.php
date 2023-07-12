@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full dark">
 
 <head>
     <meta charset="UTF-8">
@@ -8,15 +8,15 @@
 
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
     @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
-    @if ($post)
+    @if (!empty($post))
         <title>{{ $post->title }} </title>
     @else
         <title>Virtue Blog </title>
     @endif
 </head>
 
-<body class="bg-gray-200 dark:bg-zinc-800">
-    <nav class="bg-white dark:bg-zinc-900 flex justify-around dark:text-white  shadow py-4">
+<body class="bg-slate-200 dark:bg-gray-900">
+    <nav class="bg-white dark:bg-gray-800 flex justify-around dark:text-white  shadow py-4">
         <a href="/" class="hover:text-blue-400">Home</a>
         <a href="/about"class="hover:text-blue-400">About</a>
         @auth
@@ -27,7 +27,7 @@
         @endauth
         <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </nav>
-    <div>
+    <div class="h-full">
         @yield('content')
     </div>
 </body>
