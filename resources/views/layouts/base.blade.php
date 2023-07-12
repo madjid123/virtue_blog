@@ -32,5 +32,11 @@
     </div>
 </body>
 @vite(['resources/js/toggleDarkMode.js'])
+<script>
+    function toggleDarkMode() {
+        const html = document.documentElement;
+        html.classList.toggle('dark');
+    }
+</script>
 
 </html>
