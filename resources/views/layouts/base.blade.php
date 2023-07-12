@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
-    @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
+    @vite([
+        'resources/css/app.css',
+        'ressources/css/navbar.css',
+        // 'resources/js/app.js'
+    ])
     @if (!empty($post))
         <title>{{ $post->title }} </title>
     @else
@@ -25,18 +28,18 @@
             <a href="/login" class="hover:text-blue-400">Login</a>
             <a href="/register" class="hover:text-blue-400">Register</a>
         @endauth
-        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <button id="dark-mode" onclick="toggleDarkMode()"> Toggle Dark Mode</button>
     </nav>
     <div class="h-full">
         @yield('content')
     </div>
+    @vite(['resources/js/app.js'])
 </body>
-@vite(['resources/js/toggleDarkMode.js'])
-<script>
+{{-- <script>
     function toggleDarkMode() {
         const html = document.documentElement;
         html.classList.toggle('dark');
     }
-</script>
+</script> --}}
 
 </html>
