@@ -12,7 +12,7 @@
                     class="sm:rounded-lg p-2 active:bg-blue-100 bg-gray-200 border border-black outline-blue-400 outline-1 dark:bg-gray-600" />
                 {{-- <label>Author</label>
             <input placeholder="Enter author's name" name="author" /> --}}
-                <label>Content:</label>
+                <label class="text-xl font-bold">Content:</label>
                 <textarea placeholder="Enter the content of this post" name="content"
                     class=" sm:rounded-lg decoration-none bg-gray-200 dark:bg-gray-600 border border-black outline-blue-400 outline-1">
                 </textarea>
