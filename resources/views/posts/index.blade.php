@@ -4,7 +4,7 @@
         <h2 class="text-4xl font-bold pb-4 dark:text-white"> Blog Posts </h2>
         <div class="flex items-start flex-col w-4/5">
             @forelse ($posts as $post)
-                <div class="blog-card p-4 bg-white dark:bg-gray-900 dark:text-white sm:rounded-lg shadow w-full my-1">
+                <div class="blog-card p-4 bg-white dark:bg-gray-800 dark:text-white sm:rounded-lg shadow w-full my-1">
                     <h3 class="text-2xl font-bold"> <a href="/posts/{{ $post->id }}/view"
                             class="hover:text-blue-400">{{ $post->title }}</a></h3>
                     <small> <a href="/profile/{{ $post->user_id }}"
