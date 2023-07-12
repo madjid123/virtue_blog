@@ -14,10 +14,11 @@
             <input placeholder="Enter author's name" name="author" /> --}}
                 <label>Content:</label>
                 <textarea placeholder="Enter the content of this post" name="content"
-                    class=" sm:rounded-lg decoration-none dark:bg-gray-600 border border-black outline-blue-400 outline-1">
+                    class=" sm:rounded-lg decoration-none bg-gray-200 dark:bg-gray-600 border border-black outline-blue-400 outline-1">
                 </textarea>
                 <div class="flex flex-col items-center">
-                    <input type="submit" class="bg-green-500 sm:rounded-lg shadow p-3 w-1/5" />
+                    <input type="submit" value="Create"
+                        class="bg-green-400 dark:bg-green-500 sm:rounded-lg shadow p-3 w-1/5" />
                 </div>
             </div>
         </form>
