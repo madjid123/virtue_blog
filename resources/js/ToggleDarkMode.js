@@ -9,6 +9,7 @@ function toggleDarkMode() {
     const html = document.documentElement;
     html.classList.toggle('dark');
 }
+document.getElementById('dark-mode').addEventListener('click', toggleDarkMode);
 // Whenever the user explicitly chooses light mode
 // function
 // localStorage.theme = 'light'
