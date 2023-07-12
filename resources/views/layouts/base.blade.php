@@ -21,7 +21,7 @@
 <body class="bg-slate-200 dark:bg-gray-900">
     <nav class="bg-white dark:bg-gray-800 flex justify-around dark:text-white  shadow py-4">
         <a href="/" class="hover:text-blue-400">Home</a>
-        <a href="/about"class="hover:text-blue-400">About</a>
+        <a href="/about" class="hover:text-blue-400">About</a>
         @auth
             <a href="/profile" class="hover:text-blue-400">Profile</a>
         @else
