@@ -16,22 +16,32 @@
 </head>
 
 <body class="bg-slate-200 dark:bg-gray-900">
-    <nav class="bg-white dark:bg-gray-800 flex justify-around items-center dark:text-white  shadow py-4">
-        <a href="/" class="hover:text-blue-400">Home</a>
-        <a href="/about" class="hover:text-blue-400">About</a>
-        @auth
-            <a href="/profile" class="hover:text-blue-400">Profile</a>
-        @else
-            <a href="/login" class="hover:text-blue-400">Login</a>
-            <a href="/register" class="hover:text-blue-400">Register</a>
-        @endauth
-        <button id="dark-mode" onclick="toggleDarkMode()"
-            class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 sm:rounded-lg hover:bg-blue-400 border shodow">
-            {{-- Toggle Dark Mode --}}
-            <div class="w-4 h-4 flex justify-center items-center">
-                <i class="bi bi-moon-stars-fill text-gray-500 dark:text-white hover:text-black "></i>
+    <nav class="bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center dark:text-white  shadow py-4">
+        <div class="flex flex-row gap-10 items-center justify-center">
+            <div class="flex justify-center items-center">
+                <i class="bi bi-headset-vr"></i>
+
             </div>
-        </button>
+            <div class="flex justify-center gap-3 items-center">
+                <a href="/" class="hover:text-blue-400">Home</a>
+                <a href="/about" class="hover:text-blue-400">About</a>
+            </div>
+        </div>
+        <div class="flex justify-around items-center gap-10">
+            @auth
+                <a href="/profile" class="hover:text-blue-400">Profile</a>
+            @else
+                <a href="/login" class="hover:text-blue-400">Login</a>
+                <a href="/register" class="hover:text-blue-400">Register</a>
+            @endauth
+            <button id="dark-mode" onclick="toggleDarkMode()"
+                class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 sm:rounded-lg hover:bg-blue-400 border shodow">
+                {{-- Toggle Dark Mode --}}
+                <div class="w-4 h-4 flex justify-center items-center">
+                    <i class="bi bi-moon-stars-fill text-gray-500 dark:text-white hover:text-black "></i>
+                </div>
+            </button>
+        </div>
     </nav>
     <div class="h-full">
         @yield('content')
