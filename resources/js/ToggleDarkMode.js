@@ -24,8 +24,3 @@ try {
 } catch {
     console.error("not element with id : dark-mode ")
 }
-// Whenever the user explicitly chooses light mode
-// function
-
-// Whenever the user explicitly chooses to respect the OS preference
-// localStorage.removeItem('theme')
