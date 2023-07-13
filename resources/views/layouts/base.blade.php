@@ -37,11 +37,5 @@
         @yield('content')
     </div>
 </body>
-{{-- <script>
-    function toggleDarkMode() {
-        const html = document.documentElement;
-        html.classList.toggle('dark');
-    }
-</script> --}}
 
 </html>
