@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    @vite([
-        'resources/css/app.css',
-        'ressources/css/navbar.css',
-        // 'resources/js/app.js'
-    ])
+    @vite(['resources/css/app.css', 'ressources/css/navbar.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     @if (!empty($post))
         <title>{{ $post->title }} </title>
@@ -40,7 +36,6 @@
     <div class="h-full">
         @yield('content')
     </div>
-    @vite(['resources/js/app.js'])
 </body>
 {{-- <script>
     function toggleDarkMode() {
