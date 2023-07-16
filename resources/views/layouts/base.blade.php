@@ -16,9 +16,10 @@
 </head>
 
 <body class="bg-slate-200 dark:bg-gray-900">
-    <nav class="bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center dark:text-white  shadow py-4">
-        <div class="flex flex-row gap-10 items-center justify-center">
-            <div class="flex justify-center items-center">
+    <nav
+        class="bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center text-gray-600 dark:text-gray-400 shadow py-4 px-8">
+        <div class="flex flex-row gap-10 items-center justify-center mx-6">
+            <div class="flex justify-center items-center dark:text-white">
                 <i class="bi bi-headset-vr"></i>
 
             </div>
@@ -28,7 +29,7 @@
                 <a href="/about" class="hover:text-blue-400">About</a>
             </div>
         </div>
-        <div class="flex justify-around items-center gap-10">
+        <div class="flex justify-around items-center gap-10 px-8">
             @auth
                 <a href="/profile" class="hover:text-blue-400">Profile</a>
             @else
@@ -36,7 +37,7 @@
                 <a href="/register" class="hover:text-blue-400">Register</a>
             @endauth
             <button id="dark-mode" onclick="toggleDarkMode()"
-                class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 sm:rounded-lg hover:bg-blue-400 dark:hover:bg-gray-400 border shodow">
+                class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 rounded-lg hover:bg-blue-400 dark:hover:bg-gray-400 border shodow">
                 {{-- Toggle Dark Mode --}}
                 <div class="w-4 h-4 flex justify-center items-center">
                     <i class="bi bi-moon-stars-fill text-gray-500 dark:text-white hover:text-black "></i>
