@@ -17,7 +17,7 @@
 
 <body class="bg-slate-200 dark:bg-gray-900">
     <nav
-        class="bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center text-gray-600 dark:text-gray-400 shadow py-4 px-8">
+        class="sticky top-0 bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center text-gray-600 dark:text-gray-400 shadow py-4 px-8">
         <div class="flex flex-row gap-10 items-center justify-center mx-6">
             <div class="flex justify-center items-center dark:text-white">
                 <i class="bi bi-headset-vr"></i>
