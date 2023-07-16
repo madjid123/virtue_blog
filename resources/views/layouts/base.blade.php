@@ -45,7 +45,7 @@
             </button>
         </div>
     </nav>
-    <div class="h-full">
+    <div class="h-full flex justify-center">
         @yield('content')
     </div>
 </body>
