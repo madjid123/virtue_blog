@@ -24,6 +24,7 @@
             </div>
             <div class="flex justify-center gap-3 items-center">
                 <a href="/" class="hover:text-blue-400">Home</a>
+                <a href="/posts" class="hover:text-blue-400">Posts</a>
                 <a href="/about" class="hover:text-blue-400">About</a>
             </div>
         </div>
@@ -35,7 +36,7 @@
                 <a href="/register" class="hover:text-blue-400">Register</a>
             @endauth
             <button id="dark-mode" onclick="toggleDarkMode()"
-                class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 sm:rounded-lg hover:bg-blue-400 border shodow">
+                class="bg-gray-200 dark:bg-gray-600 dark:stroke-white  p-2 sm:rounded-lg hover:bg-blue-400 dark:hover:bg-gray-400 border shodow">
                 {{-- Toggle Dark Mode --}}
                 <div class="w-4 h-4 flex justify-center items-center">
                     <i class="bi bi-moon-stars-fill text-gray-500 dark:text-white hover:text-black "></i>
