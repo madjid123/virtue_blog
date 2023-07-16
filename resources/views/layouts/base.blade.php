@@ -17,7 +17,7 @@
 
 <body class="bg-slate-200 dark:bg-gray-900">
     <nav
-        class="sticky top-0 bg-white dark:bg-gray-800 flex justify-between gap-2 px-6 items-center text-gray-600 dark:text-gray-400 shadow py-4 px-8">
+        class="sticky top-0 bg-white dark:bg-gray-800 flex justify-between gap-2 ps-24 items-center text-gray-600 dark:text-gray-400 shadow py-4 px-8">
         <div class="flex flex-row gap-10 items-center justify-center mx-6">
             <div class="flex justify-center items-center dark:text-white">
                 <i class="bi bi-headset-vr"></i>
@@ -29,7 +29,7 @@
                 <a href="/about" class="hover:text-blue-400">About</a>
             </div>
         </div>
-        <div class="flex justify-around items-center gap-10 px-8">
+        <div class="flex justify-around items-center gap-5 ">
             @auth
                 <a href="/profile" class="hover:text-blue-400">Profile</a>
             @else
