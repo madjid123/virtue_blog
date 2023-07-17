@@ -17,7 +17,8 @@
                             <form action="/posts/{{ $post->id }}/delete" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <input class="text-white bg-red-600 p-1 rounded-lg px-2 text-sm" type=submit value="Delete">
+                                <input class="text-white  bg-red-600 dark:bg-red-400 p-1 rounded-lg px-2 text-sm" type=submit
+                                    value="Delete">
                             </form>
                         @endif
                     @endauth
