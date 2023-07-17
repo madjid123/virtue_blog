@@ -69,4 +69,17 @@ class PostController extends Controller
         return redirect("/posts");
         
     }
+    function delete_post(Request $request){
+        $id = $request->route()->parameter("id");
+        if ($id == null){
+            return response("Invalid id",505);
+        }
+        $post = Post::where("id",$id)->first();
+        $res = $post->delete();
+        if (!$res){
+            return response($status =500)->json(["error"=>"failed to delete the post"]);
+        }
+        return redirect("/posts");
+
+    }
 }
