@@ -23,4 +23,8 @@ class PostTest extends TestCase
 
         $response->assertStatus(302);
     }
+    public function test_edit_post():void 
+    {
+        $auth = $this->isAuthenticated();
+    }
 }
