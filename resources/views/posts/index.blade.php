@@ -14,7 +14,10 @@
                     @auth
 
                         @if (Auth::user()->id == $post->user->id)
-                            <button>Delete</button>
+                            <form action="">
+
+                                <button class="text-white bg-red-400 p-1 rounded-lg px-2">Delete</button>
+                            </form>
                         @endif
                     @endauth
                 </div>
