@@ -11,6 +11,12 @@
                             class="hover:text-red-400 dark:text-gray-200 text-gray-700">{{ $post->user->name }}</a> -
                     </small>
                     <small>{{ $post->created_at->format('j F, Y ') }}</small>
+                    @auth
+
+                        @if (Auth::user()->id == $post->user->id)
+                            <button>Delete</button>
+                        @endif
+                    @endauth
                 </div>
 
             @empty
