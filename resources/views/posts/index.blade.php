@@ -14,9 +14,10 @@
                     @auth
 
                         @if (Auth::user()->id == $post->user->id)
-                            <form action="">
-
-                                <button class="text-white bg-red-600 p-1 rounded-lg px-2">Delete</button>
+                            <form action="/posts/{{ $post->id }}/delete" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <input class="text-white bg-red-600 p-1 rounded-lg px-2" type=submit value="Delete">
                             </form>
                         @endif
                     @endauth
