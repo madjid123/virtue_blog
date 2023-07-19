@@ -20,6 +20,8 @@
                                 <input class="text-white  bg-red-600 dark:bg-red-400 p-1 rounded-lg px-2 text-sm" type=submit
                                     value="Delete">
                             </form>
+                            <button class="text-white bg-yellow-400 dark:bg-yellow-400 p-1 rounded-lg px-2 text-sm"
+                                type="submit"><a href="/posts/{{ $post->id }}/edit">Edit</a></button>
                         @endif
                     @endauth
                 </div>
