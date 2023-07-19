@@ -20,10 +20,12 @@
                                 <form action="/posts/{{ $post->id }}/delete" method="post" class="flex flex-row">
                                     @csrf
                                     @method('DELETE')
-                                    <input class="text-white  bg-red-600 dark:bg-red-400 p-1 rounded-lg px-2 text-sm"
+                                    <input
+                                        class="text-white  bg-red-600 dark:bg-red-400 p-1 rounded-lg px-2 text-sm hover:bg-gray-500 hover:dark:bg-gray-400 "
                                         type=submit value="Delete">
                                 </form>
-                                <button class="text-white bg-yellow-400 dark:bg-yellow-400 p-1 rounded-lg px-2 text-sm"
+                                <button
+                                    class="text-white bg-yellow-400 dark:bg-yellow-400 p-1 rounded-lg px-2 text-sm hover:bg-gray-500 hover:dark:bg-gray-400"
                                     type="submit"><a href="/posts/{{ $post->id }}/edit">Edit</a></button>
                             @endif
                         </div>
