@@ -33,7 +33,7 @@
             @auth
                 <a href="/posts/create"><button
                         class="text-white font-bold bg-green-600 dark:bg-green-500 hover:bg-gray-400 px-3 p-2 rounded-lg flex justify-center items-center"><i
-                            class="bi bi-plus font-bold"></i> Create</button></a>
+                            class="bi bi-plus-circle bi-bold px-1 stroke-[4px]"></i> Create</button></a>
                 <a href="/profile" class="hover:text-blue-400">Profile</a>
             @else
                 <a href="/login" class="hover:text-blue-400">Login</a>
