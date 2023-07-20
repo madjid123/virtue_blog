@@ -13,3 +13,5 @@ Route::post("/posts/create",PostController::class . "@create");
 
 Route::get("posts/{id}/view",PostController::class . "@view_post");
 Route::get("posts",PostController::class . "@show");
+
+Route::get("/posts/user/{id}",PostController::class."@show_user_posts");
