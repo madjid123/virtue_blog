@@ -1,6 +1,6 @@
 @extends('layouts.base')
 @section('content')
-    <div class="flex flex-col justify-center items-center py-4 w-full">
+    <div class="flex flex-col items-center py-4 w-full">
         <h2 class="text-4xl font-bold pb-4 dark:text-white"> Blog Posts </h2>
         <div class="flex items-start flex-col w-4/5">
             @forelse ($posts as $post)
