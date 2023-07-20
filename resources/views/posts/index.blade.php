@@ -9,7 +9,7 @@
                     <div>
                         <h3 class="text-2xl font-bold"> <a href="/posts/{{ $post->id }}/view"
                                 class="hover:text-blue-400">{{ $post->title }}</a></h3>
-                        <small> <a href="/profile/{{ $post->user_id }}"
+                        <small> <a href="/posts/user/{{ $post->user_id }}"
                                 class="hover:text-red-400 dark:text-gray-200 text-gray-700">{{ $post->user->name }}</a> -
                         </small>
                         <small>{{ $post->created_at->format('j F, Y ') }}</small>
