@@ -10,7 +10,7 @@
 ## About Virtue Blog
 
 <!-- Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as: -->
-Virtue blog is a simple blog webapp that was created by dex for learning purposes. The blog is built using Laravel and Blade, and it allows users to create, edit, and delete blog posts. Virtue blog is still under development, but it is a great way to learn about Laravel and Blade.
+Virtue blog is a simple blog webapp that was created for learning purposes. The blog is built using Laravel and Blade, and it allows users to create, edit, and delete blog posts. Virtue blog is still under development, but it is a great way to learn about Laravel and Blade.
 
 - Create blog posts: Users can create new blog posts, which can include text, images, and videos.
 - Edit blog posts: Users can edit existing blog posts, which can include updating the text, images, and videos.
